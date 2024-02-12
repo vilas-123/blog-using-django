@@ -1,0 +1,29 @@
+body{
+  background-image: url(../images/website.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.custom-email-label {
+  color: magenta; /* Change this to the desired color */
+}
+#signupButton {
+  margin-top: -2rem;
+  font-size: 1.5rem;
+  width: 450px;
+
+}
+.img-thumbnail{
+height: 450px;
+padding: 2.25rem;
+background-color: red;
+border-color: green;
+border-radius: 5rem;
+max-width: 100%;
+}
+.form-control{
+height: 50px;
+width: 400px;
+}
+p{
+  color:black;
+}

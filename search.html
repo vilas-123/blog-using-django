@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %} search {% endblock %}
+{% block body %}
+
+<div class='container mt-4'>
+    
+<h2 class= "text-center">Search results</h2> 
+<br>
+{% if allposts|length < 1 %}
+Your search <b>{{ query }}</b> did not match
+<ul>
+   <li>Make sure you have spelled correctly</li>
+</ul>
+{% endif %}
+    <div class="row row-cols-1 row-cols-md-3 g-4 bg-light">
+        {# loop through the blog posts #}
+        {% for post in allposts  %}
+        <div class="col">
+          <div class="card">
+            <a href="{{post.img.url}}" >  <img src="{{post.img.url}}" class="card-img-top" alt="..."> </a>
+            <div class="card-body">
+              <h5 class="card-title">{{post.title}}</h5>
+              <p class="card-text">{{post.description}}</p>
+              <p> Posted By:<b>{{post.authorname}}</b></p>
+              <p> Timestamp:<b>{{post.timestamp}}</b></p>
+              
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+       
+      </div>
+
+</div>
+
+
+
+{% endblock body %}
